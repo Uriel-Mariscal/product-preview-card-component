@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root{
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/*    font-family: 'Fraunces', serif; font-family: 'Montserrat', sans-serif;*/
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--cream);
+}
+
+p{
+    font-size: 1.4rem;
+}
+
+img{
+    width: 100%;
+} 
+
+.card{
+    width: 350px;
+    height: 600px;
+    background-color: var(--white);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width:768px ) {
+    .card{
+        width: 600px;
+        display: grid;
+        grid-template-columns:  repeat(2, 1fr);
+        height: auto;
+    }
+
+}
+.card__img{
+    flex: 0 0 calc(40% - 2rem);
+    background-image: url(../images/image-product-mobile.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+
+.card__info{
+    
+    padding: 2.2rem;
+}
+
+.card__info--summary{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+    font-size: 1rem;
+    color: var(--very-dark-blue);
+    margin-bottom: 1rem;
+}
+
+.card__info--title{
+    font-family: 'Fraunces', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.card__info--description{
+    color: var(--very-dark-blue);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.card__info--price{
+    color: var(--dark-cyan);
+    font-family: 'Fraunces', sans-serif;
+    font-size: 3.2rem;
+    display: inline-block;
+    
+}
+.card__info--span{
+    display: inline-block;
+    text-decoration: line-through;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--very-dark-blue);
+    margin-bottom: 1rem;
+
+}
+
+.price-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+button{
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+button:hover{
+    background-color: hsl(157.7, 37.6%, 18.2%);
+}
+button span img{
+    width: auto;
+    margin-right: 1rem;
+}
